@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <title>Radiance Hotel</title>
+</head>
+
+<body>
+  <main>
+
+    <div class="container-fluid px-0"> <!-- Container-Fluid Start -->
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">Radiance</a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/locations.html">Locations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/pages/reservations.html">Reservation</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-outline-light" type="submit">Book Now!</button>
+            </form>
+          </div>
+
+        </div>
+      </nav>
+    
+    </div> <!-- Container-Fluid End -->
+
+    <!-- Form Header -->
+    <section class="bg-secondary reserve">
+      <div class="container">
+        <div class="row gx-0 w-65 text-center py-6 mx-auto">
+          <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-calendar2-check mb-3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"/>
+            <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V4z"/>
+            <path fill-rule="evenodd" d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+          </svg>
+
+          <h2 class="h4 mb-3">Reserve Your Room!</h2>
+
+          <p>Make your reservation today and lock in your time with us. </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section>
+      <div class="container py-6 w-50">
+        <form>
+          <!-- Name -->
+          <div class="row">
+            <div class="col-xs-12 col-md-6 mb-3">
+              <label for="firstName" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="firstName" aria-describedby="firstName">
+            </div>
+            <div class="col-xs-12 col-md-6 mb-3">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lastName" aria-describedby="lastName">
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="row">
+            <div class="col-xs-12 mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+          </div>
+
+          <hr>
+          
+          <!-- Check In / Check Out -->
+          <div class="row">
+            <div class="col-xs-12 col-md-6 mb-3">
+              <label class="form-label">Check In</label>
+              <input type="date" name="bday" max="2030-12-31" min="2020-11-3" class="form-control">
+            </div>
+            <div class="col-xs-12 col-md-6 mb-3">
+              <label class="form-label">Check Out</label>
+              <input type="date" name="bday" min="2020-11-3" max="2030-12-31" class="form-control">
+            </div>
+          </div>
+
+          <!-- Rooms/ Adults/ Children -->
+          <div class="row">
+            <!-- Rooms -->
+            <div class="col-xs-12 col-md-4 mb-3">
+              <select class="form-select" aria-label="Number of Rooms">
+                <option selected>Rooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <!-- Adults -->
+            <div class="ccol-xs-12 col-md-4 mb-3">
+              <select class="form-select" aria-label="Number of Adults">
+                <option selected>Adults</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+
+            <!-- Children -->
+            <div class="col-xs-12 col-md-4 mb-3">
+              <select class="form-select" aria-label="Number of Children">
+                <option selected>Children</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Special Rates -->
+          <div class="row gx-0">
+            <div class="col-xs-12 col-md-3 mb-3">
+              <label class="form-label">Special Rates:</label>
+            </div>
+            <div class="col-xs-12 col-md-3 mb-3 form-check">
+              <input class="form-check-input" type="radio" name="specialRates" id="none" checked>
+              <label class="form-check-label" for="none">None</label>
+            </div>
+            <div class="col-xs-12 col-md-3 mb-3 form-check">
+              <input class="form-check-input" type="radio" name="specialRates" id="military">
+              <label class="form-check-label" for="military">Military/Veteran</label>
+            </div>
+            <div class="col-xs-12 col-md-3 mb-3 form-check">
+              <input class="form-check-input" type="radio" name="specialRates" id="senior">
+              <label class="form-check-label" for="senior">Senior</label>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Reserve</button>
+        </form>
+      </div>
+    </section>
+
+
+    <!-- Footer Start -->
+    <footer>
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Logo -->
+          <div class="col-xs-12 col-md-3 my-3 my-md-auto my-0 text-center"> 
+            <a class="navbar-brand" href="/">Radiance</a>
+          </div>
+          
+          <!-- Address -->
+          <div class="col-xs-12 col-md-3 my-3 my-md-auto text-center"> 
+            <div class="d-inline-block text-left">
+              <p class="mb-3"><span>Find us at</span> <br>
+                691 North Sherman St <br>
+                Charlotte, NC 28274 <br>
+                United States </p>
+              <a class="google-maps" href="https://www.google.com/maps/place/North+Carolina/" target="_blank">Google Maps</a>
+            </div>
+          </div>
+          
+          <!-- Contact Information -->
+          <div class="col-xs-12 col-md-3 my-3 my-md-auto text-center"> 
+            <div class="d-inline-block text-left">
+              <p><span>Phone</span> <br>
+                General: 785 836 2481 <br><br>
+                <span>Email</span> <br>
+                info@radiancehotel.com</p>
+            </div>
+          </div>
+          
+          <!-- Navigation -->
+          <div class="col-xs-12 col-md-3 my-3 my-md-auto text-center">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/locations.html">Locations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/reservations.html">Reservation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+  </main>
+
+
+  <!-- JavaScript Bundle with Popper.js -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+</body>
+</html>
